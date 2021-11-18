@@ -343,3 +343,124 @@ footer {
 }
 /* ------------------ AQUI TERMINA A GALERIA DE IMAGENS --------------- */
 
+
+/* Estilos da página index.html */
+
+.container h5 {
+display:flex;
+font-size: min(1.2em, 5vw);
+align-items: center;
+justify-content: center;
+padding: 10px;
+}
+
+section#comentei {
+  max-width: 100%;
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+ section#comentei table {
+   border-collapse: collapse;
+   width: 100%;
+   border-spacing: 0;
+ }
+
+section#comentei table th, td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+section#comentei table a {
+   padding: 1rem;
+   color: #3359ec;
+   text-decoration: none;
+   transition: all 0.3s ease-in-out;
+ }
+
+ section#comentei table a:hover{
+    color: #D9BA5F;
+ }
+/* Fim do estilos da página index.html */
+
+/* Inicio estilos do modal */
+section.modal{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #00000080;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+}
+
+section.modal div#card{
+  width: 30rem;
+  position: relative;
+  background-color: #fff;
+  border-radius: .5rem;
+}
+
+section.modal div#card h2{
+  padding: 2rem;
+  text-align: center;
+  margin: 0;
+  color: #0130ec;
+}
+
+section.modal div#card hr{
+  width: 90%;
+  margin: 0 auto;
+}
+
+section.modal div#card p{
+  padding: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+section.modal div#card div#btns{
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem 2rem 2rem;
+}
+
+section.modal div#card div#btns a{
+  text-decoration: none;
+  padding: .9rem;
+  border-radius: .5rem;
+  width: 7rem;
+  text-align: center;
+}
+
+section.modal div#card div#btns a.btn-cancelar{
+  background-color: #fff;
+  color: red;
+  border: solid 1px red;
+  margin-right: 1rem;
+  transition: all .5s ease-out;
+}
+
+section.modal div#card div#btns a.btn-cancelar:hover{
+  background-color: red;
+  color: #fff;
+}
+
+section.modal div#card div#btns a.btn-apagar{
+  background-color: #fff;
+  color: #0130ec;
+  border: solid 1px #0130ec;
+  transition: all .5s ease-out;
+}
+
+section.modal div#card div#btns a.btn-apagar:hover{
+  background-color: #0130ec;
+  color: #fff;
+}
+/* Fim dos estilos do modal */
