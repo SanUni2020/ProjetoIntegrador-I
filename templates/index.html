@@ -5,19 +5,18 @@
    <title>RJM Contábil</title>
 
 <body>
-<!-- Cabeçalho -->
 <header id="inicio">
     <img id="logo" src="../static/imagens/logo.jpg" alt="Logo">
     <h1>15 anos de experiência</h1>
 </header>
 
-<nav> <!-- Menu de navegação -->
+<nav>
     <a href="#empresa">Sobre</a>
     <a href="#serviços">Serviços</a>
     <a href="#contatos">Contatos</a>
 </nav>
-<!-- Principal -->
-<main><!--  COLOCAR TUDO AQUI, exceto o RODAPÉ  -->
+
+<main>
 
     <section class="container">
         <h2 id="serviços">Serviços</h2>
@@ -40,7 +39,7 @@
         <h2>Links Úteis</h2>
 
         <div class="alinha">
-            <div><!-- TUDO QUE COLOCAR AQUI DENTRO VAI FICAR CENTRALIZADO -->
+            <div>
                 <button><a href="https://www.gov.br/receitafederal/pt-br" target="_blank"><img src="../static/imagens/ReceitaFederal_150.png"></a></button>
                 <button><a href="https://servicos.receita.fazenda.gov.br/Servicos/certidaointernet/PJ/Emitir" target="_blank"><img src="../static/imagens/Cnegativa.png"></a></button>
                 <button><a href="https://www.saogoncalo.rj.gov.br/" target="_blank"><img src="../static/imagens/Prefeitura_150.png"></a></button>
@@ -51,7 +50,7 @@
 
         </div>
     </section>
-<!--    TEM QUE MODIFICAR AQUI DENTRO -->
+
     <section class="container">
         <h2 id="empresa">Empresa</h2>
 
@@ -61,6 +60,11 @@
             <img src="../static/imagens/003.jpg" alt="" onclick="mostrarImagem(this)">
             <img src="../static/imagens/004.jpg" alt="" onclick="mostrarImagem(this)">
             <img src="../static/imagens/005.jpg" alt="" onclick="mostrarImagem(this)">
+            <img src="../static/imagens/006.jpg" alt="" onclick="mostrarImagem(this)">
+            <img src="../static/imagens/007.jpg" alt="" onclick="mostrarImagem(this)">
+            <img src="../static/imagens/008.jpg" alt="" onclick="mostrarImagem(this)">
+            <img src="../static/imagens/009.jpg" alt="" onclick="mostrarImagem(this)">
+            <img src="../static/imagens/010.jpg" alt="" onclick="mostrarImagem(this)">
         </section>
 
         <section class="conteiner">
@@ -69,7 +73,7 @@
         </section>
 
     </section>
-<!--    TEM QUE MODIFICAR SO ACIMA -->
+
     <section class="container">
         <h2>Sobre</h2>
 
@@ -103,13 +107,60 @@
 
             <div id="map"></div>
         </section>
-        <!-- inicio do mapa de localização -->
+        
         <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&libraries=&v=weekly" async></script>
-     <!-- Fim do mapa de localização -->
+     
     </section>
-<!-- COMEÇANDO OS COMENTARIOS  COM BANCO DE DADOS -->
 
-<!-- TERMINANDO OS COMENTARIOS  COM BANCO DE DADOS -->
+    <section class="container">
+        <h2>Comentários</h2>
+        <h5><a href="/novo">Adicionar Comentário</a></h5>
+
+        <section id="comentei">
+            <table>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Comentário</th>
+                    <th>Ações</th>
+               </tr>
+               </thead>
+
+                <tbody>
+                {% for m in comentarios %}
+                <tr>
+                    <td>{{m.id}}</td>
+                    <td>{{m.nome}}</td>
+                    <td>{{m.comentario}}</td>
+                    <td>
+                        <a href="/edita/{{m.id}}">Editar</a>
+                        <a href="/{{m.id}}">Apagar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        {% if comenta != undefined %}
+        <section class="modal">
+
+            <div id="card">
+                <h2>Apagar o comentário escrito por:</h2>
+                <hr>
+                <p>" {{comenta.nome}} " </p>
+
+                <div id="btns">
+                    <a class="btn-cancelar" href="/#comentei">Cancelar</a>
+                    <a class="btn-apagar" href="/delete/{{comenta.id}}">Apagar</a>
+                </div>
+            </div>
+
+        </section>
+        {% endif %}
+    </section>
+
 </main>
 </body>
 {% endblock %}
