@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* comentário */
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
@@ -24,9 +23,8 @@
     --fonte-destaque: 'Bebas Neue', cursive;
 }
 
-/* Início do Cabeçalho */
 #logo {
-max-width: 100%; /* imagem adapta ao tamanho da tela*/
+max-width: 100%;
 border-radius: 150px;
 }
 
@@ -38,17 +36,14 @@ header {
     border-radius: 20px;
 }
 
-header > h1 { /* aperta ctrl + espaço, rola até o final e escolhe a cor da variável --cor: #xxxxxx */
+header > h1 {
     color: white;
     font-family: var(--fonte-destaque);
- /*   font-size: 3em; */
- /*   font-size: max(60px, 5vw); */
-    font-size: min(3em, 10vw); /* pega o menor valor entre os dois medida pela viewport */
+    font-size: min(3em, 10vw);
     font-weight: normal;
     margin-bottom: 20px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
 }
-/* FIM do Cabeçalho */
 
 body {
   background: linear-gradient(to bottom, var(--cor3), var(--cor5));
@@ -57,7 +52,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-family: var(--fonte-padrao);/*FALTA PREENCHER AQUI*/
+  font-family: var(--fonte-padrao);
   padding-right: 1rem;
   padding-left: 1rem;
 }
@@ -71,12 +66,10 @@ h1, h2 {
 }
 
 h1::before {
-/*   content: ;                        /*FALTA PREENCHER AQUI - COLOCOU UM EMOJI DE UM EMAIL*/
    display: block;
 }
 
 h2::before {
-/*   content: ;                             /*FALTA PREENCHER AQUI - COLOCOU UM EMOJI DIFERENTE*/
    display: block;
 }
 
