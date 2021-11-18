@@ -1,10 +1,7 @@
 @charset "UTF-8";
-/* comentário */
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-/* *{tudo aqui dentro é global, vale para todos}
- - Zera as margens dos navegadores */
 * {
     margin: 0px;
     padding: 0px;
@@ -38,27 +35,22 @@ header {
     padding-top: 40px;
 }
 
-header > h1 { /* aperta ctrl + espaço, rola até o final e escolhe a cor da variável --cor: #xxxxxx */
+header > h1 {
     color: white;
     font-family: var(--fonte-destaque);
- /*   font-size: 3em; */
- /*   font-size: max(60px, 5vw); */
-    font-size: min(3em, 10vw); /* pega o menor valor entre os dois medida pela viewport */
+    font-size: min(3em, 10vw);
     font-weight: normal;
     margin-bottom: 20px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
 }
 
 body {
-/*background-color: #D9BA5F; /* cor de fundo do site inteiro */
-background-image: linear-gradient(to top, var(--cor0), var(--cor7)); /* degradê de baixo para cima */
+background-image: linear-gradient(to top, var(--cor0), var(--cor7));
 }
 
-
-/*                    MENU de NAVEÇAÇAO               */
 nav {
-    text-align: center; /*TESTE CENTRALIZANDO MENU---*/
-    background-color: var(--cor5); /* faixa azul cor5*/
+    text-align: center;
+    background-color: var(--cor5);
     max-width: 1440px;
     padding: 10px;
     margin: auto;
@@ -67,31 +59,29 @@ nav {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-/*nav > a (o link que está dentro de nav)*/
+
 nav > a {
     color: var(--cor1);
-    padding: min(10px, 5px); /*   TESTANDO 10px;*/
-    border-radius: 5px; /*borda arredondada*/
+    padding: min(10px, 5px);
+    border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    font-size: min(1.5em, 5vw); /* pega o menor valor entre os dois medida pela viewport */
-    transition-duration: .5s; /*tempo q demora para transição da seleção do mouse*/
+    font-size: min(1.5em, 5vw);
+    transition-duration: .5s;
 }
-/*nav > a:hover (quando passar o mouse sobre)*/
+
 nav > a:hover {
     background-color: var(--cor4);
     color: var(--cor5)
 }
 
-/*          MAIN           */
 main {
- /*   min-width: 150px;*/
     max-width: 1252px;
-    height: auto; /*     altura do main */
+    height: auto;
     margin: auto;
     margin-bottom: 3px;
     padding: 3px;
-    background-color: #4E7FBF;  /* estava white / var(--cor0)/ #FEFAE7 quase branco /#DFD1A5 clarinho */
+    background-color: #4E7FBF;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -99,13 +89,12 @@ main {
 
 .container {
     max-width: 100%;
- /*   min-width: 150px;       RETIREI O MIN POQRQUE DIMINUI ATÉ PARAR DE DIMINUIR A TELA   */
     width: 1251px;
-    height: 1070; /*     altura do main */
+    height: 1070;
     margin: auto;
     margin-bottom: 0px;
     padding: 0px;
-    background-color: white;  /* estava white */
+    background-color: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -116,7 +105,7 @@ section > h2 {
     color: var(--cor4);
     font-size: min(1.5em, 5vw);
     font-weight: bold;
-    background-image: linear-gradient(to right, var(--cor1), var(--cor7)); /* estava transparent*/
+    background-image: linear-gradient(to right, var(--cor1), var(--cor7));
     text-align: center;
     text-indent: 8px;
 }
@@ -132,101 +121,64 @@ h3 {
     color: var(--cor4);
     font-size: min(1.5em, 5vw);
     font-weight: bold;
-    background-image: linear-gradient(to right, var(--cor1), var(--cor7)); /* estava transparent*/
+    background-image: linear-gradient(to right, var(--cor1), var(--cor7));
     text-align: left;
     text-indent: 30px;
 }
 
-/* para todos os paragrafos p*/
 main p {
     margin: 30px;
     text-align: center;
     text-indent: 0px;
-   /* font-size: 1.2em;*/
     font-size: min(1.2em, 5vw);
- /* font-size: 1em; (se quiser regular o tamanho da fonte)
-    line-height: 2em; ( se quiser regular o espaço entre as linhas) */
 }
 
-/* ----------------   LINKS UTEIS COMEÇA AQUI  ---------------- */
 .alinha {
-/*background: black;*/
-
 display: flex;
-
 justify-content: center;
 align-items: center;
 }
-/* A IMAGEM QUE VAI DENTRO TEM QUE SER DO MESMO TAMANHO */
+
 button {
-/* background: red;*/
 width: 150px;
 height: 150px;
-
-margin-left: 4vh;/*MEXENDO 4  AQUI*/
-
-margin-top: 5px;/*MEXENDO AQUI*/
-margin-bottom: 2.5px;/*MEXENDO AQUI*/
-background: rgba(255, 255, 255, .1);/* deixar png transparente*/
+margin-left: 4vh;
+margin-top: 5px;
+margin-bottom: 2.5px;
+background: rgba(255, 255, 255, .1);
 }
-button:hover{/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+button:hover{
     opacity: 0.5;
 }
-/* ----------------   LINKS UTEIS TERMINA AQUI  ---------------- */
 
-/* ----------------   MAPA E CONTATOS COMEÇA AQUI  ---------------- */
-/* Set the size of the div element that contains the map */
 #map {
   height: 400px;
-  /* The height is 400 pixels */
   width: 100%;
-  /* The width is the width of the web page */
 }
 
 .contato {
-    padding: 60px 20%;
-    /*background: red;*/
-  /*  position: relative;*/
+  padding: 60px 20%;
 }
+
 .contato .contato-card {
     width: 100%;
-  /*  width: 350px;
-    height: 300px;*/
-
- /*   background-image: linear-gradient(to right, var(--cor7), var(--cor1));/*var(--cor7), var(--cor1));*/
-  /*  position: absolute;
-    z-index:99;*/
     border-radius: 8px;
-
     top: calc(50% - 150px);
-  /*  left: calc(20% - 175px)*/
-  /*  margin-bottom: 40px;*/
 }
-/*.contato .contato-card button {*/
+
 .botao {
-/*opacity: 0.8;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
-/*justify-content: center;*/
-/*align-items: center;*/
-
-/*max-width: 100%;*/
 width: 178px;
 height: 80px;
-/*margin-left: 43px;*/
-background: rgba(255, 255, 255, .1);/* deixar png transparente*/
+background: rgba(255, 255, 255, .1);
 margin-top: 5px;
 margin-left: 6vh;
 margin-bottom: 5px;
-
-/*padding: min(10px, 5px); /*   TESTANDO 10px;*/
 }
-.contato .contato-card button:hover{/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.contato .contato-card button:hover{
     opacity: 0.5;
 }
 
-/* ----------------   MAPA E CONTATOS TERMINA AQUI  ---------------- */
-
-/* ----- FORMULÁRIO DE CONTATO COMEÇA AQUI  ----- */
 h4 {
 display:flex;
 align-items: center;
@@ -278,10 +230,7 @@ font-weight: bold;
 form label {
 margin-left: 10px;
 }
-/* ----- FORMULÁRIO DE CONTATO TERMINA AQUI  ----- */
 
-
-/* Rodapé e botão fixo de ir para topo da pagina do site */
 #topo {
     position: fixed;
     right: 20px;
@@ -295,24 +244,20 @@ footer {
     padding: 5px;
 }
 
-/* ------------------ AQUI COMEÇA A GALERIA DE IMAGENS --------------- */
-
 .galeria{
     display: inline-block;
-  /*  border: 1px solid #000; /*cor black*/
     width: 100%;
     margin-bottom: 10px;
 
 }
-.galeria img{/*toda img que usa a classe galeria*/
-   /* opacity: 0.5;*/
+.galeria img{
     cursor: pointer;
     width: 150px;
     margin-top: 5px;
-    margin-left: 8.8vh;/*alterando aqio ---------------------------------------*/
+    margin-left: 8.8vh;
     margin-bottom: 2.5px;
-   /* margin-right: 0px;*/
 }
+
 .galeria img:hover{
     opacity: 0.5;
 }
@@ -323,28 +268,25 @@ footer {
     width: 60%;
     margin: auto;
 }
-.conteiner img{/*contem a imagemGrande*/
-    width: 100%;/*a imagem vai ocupar 100% do container*/
+
+.conteiner img{
+    width: 100%;
 }
 
 .btnFechar{
-    width: 18px; /*largura do fundo*/
- 	height: 18px; /*altura do fundo*/
- 	text-align: center; /*alinhamento to texto no meio do botão (esq-dir)*/
+    width: 18px;
+   	height: 18px;
+   	text-align: center;
     position: absolute;
     top: 10px;
     right: 10px;
     color: #fff;
-    font-size: 15px; /*tamanho da fonte (X)*/
+    font-size: 15px;
     border-radius: 50%;
-    border: 1px solid #fff; /*borda do botão #ccc; */
-    background-color: #456EBF; /*cor de fundo do botão*/
+    border: 1px solid #fff;
+    background-color: #456EBF;
     cursor: pointer;
 }
-/* ------------------ AQUI TERMINA A GALERIA DE IMAGENS --------------- */
-
-
-/* Estilos da página index.html */
 
 .container h5 {
 display:flex;
@@ -382,9 +324,7 @@ section#comentei table a {
  section#comentei table a:hover{
     color: #D9BA5F;
  }
-/* Fim do estilos da página index.html */
 
-/* Inicio estilos do modal */
 section.modal{
   position: fixed;
   top: 0;
@@ -463,4 +403,3 @@ section.modal div#card div#btns a.btn-apagar:hover{
   background-color: #0130ec;
   color: #fff;
 }
-/* Fim dos estilos do modal */
