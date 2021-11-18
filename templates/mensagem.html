@@ -10,7 +10,7 @@
 
         <h2>Mensagem</h2>
 
-        <h4>Formulario de Contato</h4>
+        <h4>Formulário de Contato</h4>
 
         <section class="mensagem">
 
@@ -18,19 +18,19 @@
                 <div class="formu">
                     <input type="hidden" name="accessKey" value="a05c907c-8ed3-4966-9cd1-9655a2a765ca">
                     <label><strong>Nome</strong></label>
-                    <input type="text" placeholder="Digite seu nome" name="name" required/>
+                    <input type="text" maxlength="50" placeholder="Digite seu nome" name="name" required/>
                 </div>
                 <div class="formu">
                     <label><strong>Telefone</strong></label>
-                    <input type="text" placeholder="Digite seu número de telefone" name="phone" required/>
+                    <input type="text" maxlength="20" placeholder="Digite seu número de telefone" name="phone" required/>
                 </div>
                 <div class="formu">
                     <label for="email"><strong>Email</strong></label>
-                    <input type="email" placeholder="Digite seu email" name="email" id="email" required/>
+                    <input type="email" maxlength="50" placeholder="Digite seu email" name="email" id="email" required/>
                 </div>
                 <div class="formu">
                     <label><strong>Mensagem</strong></label>
-                    <textarea rows="10" placeholder="Digite sua mensagem" name="message" required></textarea>
+                    <textarea rows="10" maxlength="800" placeholder="Digite sua mensagem" name="message" required></textarea>
                     <input type="hidden" name="redirectTo" value="https://rjm-contabil.herokuapp.com/obrigado">
                 </div>
                 <div class="formu">
