@@ -181,8 +181,8 @@ margin-bottom: 5px;
 
 h4 {
 display:flex;
-align-items: center;
 justify-content: center;
+align-items: center;
 padding: 20px;
 background-color: cornflowerblue;
 color: white;
@@ -192,8 +192,8 @@ font-size: min(1.5em, 5vw);
 
 .mensagem {
 display: flex;
-align-items: center;
 justify-content: center;
+align-items: center;
 height: 80vh;
 }
 
